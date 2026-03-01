@@ -1,11 +1,11 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+このファイルは、Claude Code (claude.ai/code) がこのリポジトリで作業する際のガイダンスを提供します。
 
-## Project Overview
+## プロジェクト概要
 
-A sample project demonstrating use of [unoserver](https://github.com/unoconv/unoserver) (LibreOffice-based document conversion server) with a Docker-based client. Python is the primary language (per `.gitignore`).
+[unoserver](https://github.com/unoconv/unoserver)（LibreOfficeベースのドキュメント変換サーバー）をDockerクライアントで利用するサンプルプロジェクト。主要言語はPython（`.gitignore`より）。
 
-## Status
+## 状態
 
-This repository is in early development — currently contains only the README and gitignore. Architecture and build commands will be documented as the project takes shape.
+このリポジトリは初期開発段階であり、現時点ではREADMEとgitignoreのみが存在する。コードやビルドツールが追加され次第、アーキテクチャやコマンドをここに記載する。
