@@ -1,6 +1,11 @@
 [project]
 name = "docker-unoserver-client-sample"
 version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "unoserver",
+    "jinja2",
+]
