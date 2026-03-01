@@ -1,0 +1,5 @@
+services:
+  unoserver:
+    image: fufuhu/unoserver
+    ports:
+      - "2003:2003"
