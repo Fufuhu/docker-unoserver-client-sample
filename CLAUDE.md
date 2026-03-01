@@ -4,8 +4,14 @@
 
 ## プロジェクト概要
 
-[unoserver](https://github.com/unoconv/unoserver)（LibreOfficeベースのドキュメント変換サーバー）をDockerクライアントで利用するサンプルプロジェクト。主要言語はPython（`.gitignore`より）。
+[unoserver](https://github.com/unoconv/unoserver)（LibreOfficeベースのドキュメント変換サーバー）をDockerで利用するサンプルプロジェクト。Dockerイメージは `fufuhu/unoserver` を使用。主要言語はPython。
 
-## 状態
+## 開発コマンド
 
-このリポジトリは初期開発段階であり、現時点ではREADMEとgitignoreのみが存在する。コードやビルドツールが追加され次第、アーキテクチャやコマンドをここに記載する。
+- サーバー起動: `docker compose up`
+- バックグラウンド起動: `docker compose up -d`
+- 停止: `docker compose down`
+
+## アーキテクチャ
+
+- unoserverはポート2003で公開（`docker-compose.yml`で定義）
