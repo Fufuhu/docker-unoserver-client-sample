@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF変換</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        h1 { font-size: 1.5rem; }
+        form {
+            border: 2px dashed #ccc;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input[type="file"] { margin-bottom: 16px; }
+        button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .htmx-indicator {
+            display: none;
+            margin-top: 16px;
+            color: #666;
+        }
+        .htmx-request .htmx-indicator { display: block; }
+        #result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>PDF変換ツール</h1>
+    <form hx-post="/convert"
+          hx-target="#result"
+          hx-encoding="multipart/form-data"
+          hx-indicator="#spinner">
+        <p>変換したいファイルを選択してください</p>
+        <input type="file" name="file" required><br>
+        <button type="submit">変換</button>
+        <div id="spinner" class="htmx-indicator">変換中...</div>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
