@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF変換</title>
-    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     <style>
         body {
             font-family: sans-serif;
@@ -41,15 +40,10 @@
 </head>
 <body>
     <h1>PDF変換ツール</h1>
-    <form hx-post="/convert"
-          hx-target="#result"
-          hx-encoding="multipart/form-data"
-          hx-indicator="#spinner">
+    <form method="post" action="/convert" enctype="multipart/form-data">
         <p>変換したいファイルを選択してください</p>
         <input type="file" name="file" required><br>
         <button type="submit">変換</button>
-        <div id="spinner" class="htmx-indicator">変換中...</div>
     </form>
-    <div id="result"></div>
 </body>
 </html>
